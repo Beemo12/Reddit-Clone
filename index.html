@@ -7,35 +7,48 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
+    <!-- Header with Login and Hamburger Menu -->
     <header>
+        <div class="header-left">
+            <button class="login-btn">Login</button>
+        </div>
         <div class="logo">
             <img src="/images/fortnitelogo.png" alt="Fortnite Logo">
             <h1>Fortnite Reddit</h1>
         </div>
+        <div class="header-right">
+            <button class="hamburger-menu">&#9776;</button>
+        </div>
     </header>
 
+    <!-- Main description of what's happening -->
+    <div class="main-description">
+        <p>Share your best Fortnite moments, tips, and battle royale strategies!</p>
+    </div>
+
+    <!-- Container for one post -->
     <div class="container">
         <div class="post">
             <h2>Best Fortnite Moments!</h2>
+            <img src="/images/post1.jpg" alt="Best Fortnite Moments" class="post-image">
             <div class="vote">
                 <button class="upvote">↑</button>
                 <span class="vote-count">10</span>
                 <button class="downvote">↓</button>
             </div>
             <div class="comment-section">
-                <p>Comment: Awesome headshot!</p>
+                <button class="view-comments">View Comments</button>
             </div>
         </div>
+    </div>
 
-        <div class="post">
-            <h2>Battle Royale Tips</h2>
-            <div class="vote">
-                <button class="upvote">↑</button>
-                <span class="vote-count">5</span>
-                <button class="downvote">↓</button>
-            </div>
-            <div class="comment-section">
-                <p>Comment: Always build ramps when under fire!</p>
+    <!-- Modal for comments -->
+    <div class="modal" id="commentModal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Comments</h2>
+            <div class="comments" id="commentList">
+                <!-- Comments will be dynamically loaded here -->
             </div>
         </div>
     </div>

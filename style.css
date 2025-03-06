@@ -113,7 +113,6 @@ header .header-right button:hover {
     background-color: #7b1fa2;
 }
 
-/* Modal styles */
 .modal {
     display: none;
     position: fixed;

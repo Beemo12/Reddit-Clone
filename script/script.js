@@ -8,13 +8,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const closeModalButton = document.querySelector(".close-btn");
     let hasVoted = false;
 
-    // Function to fetch comments from JSON
     function fetchComments() {
-        fetch('/comments.json') // Path to your JSON file
+        fetch('/comments.json')
             .then(response => response.json())
             .then(data => {
-                // Render comments inside the modal
-                commentList.innerHTML = ''; // Clear any existing comments
+                commentList.innerHTML = ''; 
                 data.comments.forEach(comment => {
                     const commentDiv = document.createElement("div");
                     commentDiv.classList.add("comment");
@@ -25,7 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
             .catch(error => console.error('Error loading comments:', error));
     }
 
-    // Handle upvote and downvote functionality
     upvoteButton.addEventListener("click", function () {
         if (!hasVoted) {
             let count = parseInt(voteCount.textContent);
@@ -42,13 +39,11 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Open the modal and fetch comments when the button is clicked
     viewCommentsButton.addEventListener("click", function () {
-        fetchComments(); // Fetch comments when the button is clicked
-        modal.style.display = "flex"; // Show the modal with comments
+        fetchComments();
+        modal.style.display = "flex"; 
     });
 
-    // Close the modal when the close button is clicked
     closeModalButton.addEventListener("click", function () {
         modal.style.display = "none"; // Hide the modal
     });

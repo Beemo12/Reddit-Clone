@@ -3,51 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fortnite Reddit</title>
-    <link rel="stylesheet" href="/style.css">
+    <title>Reddit Clone</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <div class="header-left">
-            <button class="login-btn">Login</button>
-        </div>
         <div class="logo">
-            <img src="/images/fortnitelogo.png" alt="Fortnite Logo">
-            <h1>Fortnite Reddit</h1>
+            <img src="fortnitelogo.png" alt="Reddit Logo">
         </div>
-        <div class="header-right">
-            <button class="hamburger-menu">&#9776;</button>
+        <div class="search-bar">
+            <input type="text" placeholder="Search Reddit">
+        </div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Trending</a>
+            <a href="#">Subreddits</a>
+            <a href="#">Log In</a>
+            <a href="#">Sign Up</a>
         </div>
     </header>
 
-    <div class="main-description">
-        <p>Share your best Fortnite moments, tips, and battle royale strategies!</p>
-    </div>
-
-    <div class="container">
-        <div class="post">
-            <h2>Best Fortnite Moments!</h2>
-            <img src="/images/post1.jpg" alt="Best Fortnite Moments" class="post-image">
-            <div class="vote">
-                <button class="upvote">↑</button>
-                <span class="vote-count">10</span>
-                <button class="downvote">↓</button>
-            </div>
-            <div class="comment-section">
-                <button class="view-comments">View Comments</button>
-            </div>
+    <div class="main-content">
+        <div class="posts-container" id="posts-container">
+        </div>
+        <div class="sidebar">
+            <h3>Popular Communities</h3>
+            <ul>
+                <li><a href="#">r/technology</a></li>
+                <li><a href="#">r/science</a></li>
+                <li><a href="#">r/gaming</a></li>
+                <li><a href="#">r/news</a></li>
+                <li><a href="#">r/music</a></li>
+            </ul>
         </div>
     </div>
-
-    <div class="modal" id="commentModal">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <h2>Comments</h2>
-            <div class="comments" id="commentList">
-            </div>
-        </div>
-    </div>
-
+    
     <script src="/script/script.js"></script>
 </body>
 </html>

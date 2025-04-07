@@ -2,6 +2,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const postsContainer = document.getElementById("posts-container");
     let postCount = 0;
 
+    if (!postsContainer) {
+        console.error("Error: posts-container niet gevonden!");
+        return;
+    }
+
     function fetchPosts() {
         return new Promise((resolve) => {
             setTimeout(() => {
@@ -13,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         time: postCount + " hours ago",
                         title: "Post Title " + postCount,
                         content: "This is the content of post " + postCount + ". It can be text, images, or videos.",
-                        imageUrl: "https://via.placeholder.com/600x300",
+                        imageUrl: "/images/profile-pic.jpg",
                         comments: [
                             { username: "commenter1", time: "1 hour ago", content: "Great post!" },
                             { username: "commenter2", time: "30 minutes ago", content: "I totally agree!" }
@@ -67,12 +72,15 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     async function loadPosts() {
+        console.log("Fetching new posts...");
         const posts = await fetchPosts();
         posts.forEach(createPost);
+        console.log("Posts toegevoegd!");
     }
 
     window.addEventListener("scroll", () => {
-        if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 500) {
+        if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 200) {
+            console.log("Bijna einde van pagina - laden nieuwe posts...");
             loadPosts();
         }
     });

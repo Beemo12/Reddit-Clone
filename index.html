@@ -3,41 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reddit Clone</title>
+    <title>reddit: the front page of the internet</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="fortnitelogo.png" alt="Reddit Logo">
+    <header class="header">
+        <div class="header-left">
+            <a href="#" class="reddit-logo">
+                <div class="logo-icon">r</div>
+                reddit
+            </a>
         </div>
-        <div class="search-bar">
-            <input type="text" placeholder="Search Reddit">
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search Reddit">
         </div>
-        <div class="nav-links">
-            <a href="#">Home</a>
-            <a href="#">Trending</a>
-            <a href="#">Subreddits</a>
-            <a href="#">Log In</a>
-            <a href="#">Sign Up</a>
+        <div class="header-right">
+            <a href="#" class="btn btn-outline">Log In</a>
+            <a href="#" class="btn btn-filled">Sign Up</a>
         </div>
     </header>
 
-    <div class="main-content">
-        <div class="posts-container" id="posts-container">
-        </div>
-        <div class="sidebar">
-            <h3>Popular Communities</h3>
-            <ul>
-                <li><a href="#">r/technology</a></li>
-                <li><a href="#">r/science</a></li>
-                <li><a href="#">r/gaming</a></li>
-                <li><a href="#">r/news</a></li>
-                <li><a href="#">r/music</a></li>
-            </ul>
-        </div>
+    <div class="main-container">
+        <main class="content">
+            <div class="sort-bar">
+                <button class="sort-option active">Best</button>
+                <button class="sort-option">Hot</button>
+                <button class="sort-option">New</button>
+                <button class="sort-option">Top</button>
+                <button class="sort-option">Rising</button>
+            </div>
+            <div class="posts-container" id="posts-container">
+            </div>
+            <div class="loading" id="loading">Loading more posts...</div>
+        </main>
+
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <div class="sidebar-header">Popular Communities</div>
+                <div class="sidebar-content">
+                    <a href="#" class="community-item">
+                        <div class="community-icon">A</div>
+                        <div>r/AskReddit</div>
+                    </a>
+                    <a href="#" class="community-item">
+                        <div class="community-icon">F</div>
+                        <div>r/funny</div>
+                    </a>
+                    <a href="#" class="community-item">
+                        <div class="community-icon">G</div>
+                        <div>r/gaming</div>
+                    </a>
+                    <a href="#" class="community-item">
+                        <div class="community-icon">P</div>
+                        <div>r/pics</div>
+                    </a>
+                    <a href="#" class="community-item">
+                        <div class="community-icon">S</div>
+                        <div>r/science</div>
+                    </a>
+                    <a href="#" class="community-item">
+                        <div class="community-icon">W</div>
+                        <div>r/worldnews</div>
+                    </a>
+                    <a href="#" class="community-item">
+                        <div class="community-icon">T</div>
+                        <div>r/todayilearned</div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="sidebar-card">
+                <div class="sidebar-header">Home</div>
+                <div class="sidebar-content">
+                    <p style="font-size: 14px; margin-bottom: 12px;">Your personal Reddit frontpage. Come here to check in with your favorite communities.</p>
+                    <a href="#" class="btn btn-filled" style="width: 100%; text-align: center; display: block; margin-bottom: 8px;">Create Post</a>
+                    <a href="#" class="btn btn-outline" style="width: 100%; text-align: center; display: block;">Create Community</a>
+                </div>
+            </div>
+        </aside>
     </div>
-    
-    <script src="/script/script.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
